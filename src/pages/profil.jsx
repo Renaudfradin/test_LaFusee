@@ -1,11 +1,11 @@
 import React, { useMemo, useState } from "react";
 import { auth, database } from "../firebase.js";
-import LogOut from "@/components/logoutBtn.jsx";
 import { onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { ref, onValue } from "firebase/database";
 import CardTasks from "@/components/cardTasks.jsx";
 import AddTasks from "@/components/addTasks.jsx";
+import "@/style/profil.css";
 
 export default function profil() {
   const navigate = useNavigate();
@@ -20,41 +20,31 @@ export default function profil() {
         setIdUsers(user.uid);
         const refStats = ref(database, 'tasks/' + user.uid);
         onValue(refStats, (snapshot) => {
-          console.log(snapshot);
-          if (snapshot) {
-            console.log(Object.values(snapshot.val()));
-            setdata(Object.values(snapshot.val()));
-          } else {
-            console.log("pa de tasks");
-          }
+          setdata(Object.entries(snapshot.val()));
         })
       } else {
-        console.log('pas de users');
         navigate("/");
       }
     })
-  }, []);
+  }, [ ]);
   
   return (
-    <div>
-      <LogOut />
-      <h1>profil page {email}</h1>
-      <p className="">{email}</p>
-      <p>{idUsers}</p>
-      <div className="">
+    <div className="containerprofil">
+      <h1>Profil de { email }</h1>
+      <div className="addTasks">
         <AddTasks
          idUsers = { idUsers }
         ></AddTasks>
-
       </div>
-      <div className="">
-        <h2>list tasks</h2>
+      <div className="mapTasks">
         {datas.map((task, index) => (
           <CardTasks
             key={ index }
-            nomTasks={ task.nomTasks }
-            descriptionTasks={ task.descriptionTasks }
-            finish={ task.finish }
+            nomTasks={ task[1].nomTasks }
+            descriptionTasks={ task[1].descriptionTasks }
+            finish={ task[1].finish }
+            idUsers={ idUsers }
+            idTasks={ task[0] }
           ></CardTasks>
         ))}
       </div>

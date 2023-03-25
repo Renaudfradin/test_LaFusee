@@ -1,6 +1,5 @@
-import React from 'react'
-import Router from './router/router.jsx'
-import './App.css'
+import React from 'react';
+import Router from './router/router.jsx';
 
 export default function App() {
   return (

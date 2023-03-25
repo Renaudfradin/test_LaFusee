@@ -1,0 +1,110 @@
+.containerprofil {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.mapTasks {
+  width: 70%;
+  margin-top: 20px;
+}
+
+.addTasks {
+  width: 70%;
+  margin-top: 20px;
+}
+
+.btnAdd {
+  height: 40px;
+  border-radius: 15px;
+  margin-right: 10px;
+  width: 150px;
+  font-weight: bold;
+  background-color: #ff9900;
+  color: var(--secondary-color);
+  border: none;
+}
+
+.inputTasks {
+  border-radius: 5px;
+  border: 1px solid var(--secondary-color);
+  height: 22px;
+  width: 200px;
+}
+
+
+
+.formTasks {
+  display: flex;
+  background-color: #444444;
+  border-radius: 5px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blockInput {
+  display: flex;
+  flex-direction: row;
+  margin-right: 15px;
+}
+
+.blockInputInfo {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+
+.tasksCard {
+  display: flex;
+  background-color: #444444;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.infoTasks h2 {
+  color: var(--primary-color);
+  font-size: 28px;
+}
+
+.infoTasks p {
+  color: var(--secondary-color);
+  font-size: 14px;
+}
+
+.btnTasks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.btnDelete {
+  font-weight: bold;
+  height: 40px;
+  border-radius: 15px;
+  width: 90px;
+  border-color: #c43032;
+  color: #c43032;
+  background-color: #f5f6f7;
+}
+
+.btnFinish {
+  font-weight: bold;
+  height: 40px;
+  border-radius: 15px;
+  margin-right: 10px;
+  width: 90px;
+  border-color: #0ff366;
+  color: #0ff366;
+  background-color: #a7babf48;
+}

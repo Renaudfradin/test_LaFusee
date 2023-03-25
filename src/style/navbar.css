@@ -1,0 +1,24 @@
+.navbarBlock{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.navbarBlock a{
+  text-decoration: none;
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+
+.btnLogOut{
+  height: 40px;
+  border-radius: 15px;
+  margin-right: 10px;
+  width: 150px;
+  font-weight: bold;
+  background-color: #ff9900;
+  color: var(--secondary-color);
+  border: none;
+}

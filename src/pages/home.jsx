@@ -1,12 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-export default function home(params) {
-  useEffect(() => {
-    console.log();
-  })
+export default function home() {
   return (
-    <div>
-      <h1>home page</h1>
+    <div className="container">
+      <h1>The Todolist</h1>
+      <p>Test de l'Agence La fusée</p>
+      <p>Connectez-vous où inscrivez-vous pour vois la todolist</p>
     </div>
   )
 }

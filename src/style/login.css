@@ -1,0 +1,35 @@
+.titleForm{
+  color: var(--secondary-color);
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.errorMsg{
+  color: red;
+}
+
+.inputLogin{
+  border-radius: 5px;
+  border: 1px solid var(--secondary-color);
+  height: 26px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.formLogin{
+  width: 30%;
+  text-align: center;
+}
+
+.btnLog{
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 15px;
+  margin-right: 10px;
+  width: 150px;
+  font-weight: bold;
+  background-color: #ff9900;
+  color: var(--secondary-color);
+  border: none;
+}
