@@ -7,7 +7,7 @@ export default function cardTasks({ nomTasks, descriptionTasks, finish, idUsers,
   const removeTasks = () => {
     const taskstliste = ref(database, 'tasks/' + idUsers + '/' + idTasks);
     remove(taskstliste, (snapshot) => {
-      console.log(snapshot.val());
+      
     })
   }
 
@@ -22,7 +22,7 @@ export default function cardTasks({ nomTasks, descriptionTasks, finish, idUsers,
 
   return (
     <div className="tasksCard">
-      <div className="infoTasks">
+      <div className={!finish ? "infoTasksNotFinish" : "infoTasksFinish"}>
         <h2>{ nomTasks }</h2>
         <p>{ descriptionTasks }</p>
       </div>

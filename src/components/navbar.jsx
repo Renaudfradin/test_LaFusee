@@ -9,11 +9,8 @@ export default function navbar() {
   const [email, setEmail] = useState("");
   
   useEffect(() => {
-    console.log(auth);
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log(email);
-        console.log(user);
         setEmail(user);
       }
     })
