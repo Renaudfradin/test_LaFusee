@@ -1,21 +1,9 @@
-import React,{ useEffect, useState } from "react";
+import React from "react";
 import LogOut from "@/components/logoutBtn.jsx";
 import { NavLink } from "react-router-dom";
-import { auth } from "../firebase.js";
-import { onAuthStateChanged } from "firebase/auth";
 import "@/style/navbar.css";
 
 export default function navbar() {
-  const [email, setEmail] = useState("");
-  
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setEmail(user);
-      }
-    })
-  });
-  
   return (
     <div className="navbarBlock">
       {/* {email ? (
@@ -27,7 +15,7 @@ export default function navbar() {
         </>
       )
       } */}
-      <NavLink to="/login">Conexion</NavLink>
+      <NavLink to="/login">Conexion { userIsLogin }</NavLink>
       <NavLink to="/singup">Inscription</NavLink>
       <LogOut></LogOut>
     </div>
