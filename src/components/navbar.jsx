@@ -15,7 +15,7 @@ export default function navbar() {
         </>
       )
       } */}
-      <NavLink to="/login">Conexion { userIsLogin }</NavLink>
+      <NavLink to="/login">Conexion</NavLink>
       <NavLink to="/singup">Inscription</NavLink>
       <LogOut></LogOut>
     </div>
